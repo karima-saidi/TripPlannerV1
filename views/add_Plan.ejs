@@ -1,0 +1,38 @@
+<%- include('layout/header')%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto mt-4">
+                <div class="card shadow">
+                    <div class="card-header bg-primary">
+                        <h3 class="text-light">Add New Plan</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="/add" method="post" id="add-form" enctype="multipart/from-data">
+                        <div class="mb-3">
+                            <label for="ville">Ville</label>
+                            <input type="text" name="ville" class="form-control form-control-lg" placeholder="Enter Ville" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="nomSite">Nom Site</label>
+                            <input type="text" name="nomSite" class="form-control form-control-lg" placeholder="Enter Site" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="addressSite">Adresse Site</label>
+                            <input type="text" name="addressSite" class="form-control form-control-lg" placeholder="Enter Site" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Select Image</label>
+                            <input type="file" name="image" class="form-control form-control-lg" required />
+                        </div>
+                        <div class="mb-3 d-grid">
+                            <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Add Plan" />
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <%- include('layout/footer')%>

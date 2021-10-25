@@ -1,0 +1,40 @@
+<%- include('layout/header')%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto mt-4">
+                <div class="card shadow">
+                    <div class="card-header bg-success">
+                        <h3 class="text-light">Edit Plan</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="/update/<%=plan._id%>" method="post" id="add-form" enctype="multipart/from-data">
+                        <div class="mb-3">
+                            <label for="ville">Ville</label>
+                            <input type="text" name="ville"  value="<%= plan.ville %>" class="form-control form-control-lg" placeholder="Enter Ville"  />
+                        </div>
+                        <div class="mb-3">
+                            <label for="nomSite">Nom Site</label>
+                            <input type="text" name="nomSite" value="<%= plan.NomSite %>" class="form-control form-control-lg" placeholder="Enter Site"  />
+                        </div>
+                        <div class="mb-3">
+                            <label for="addressSite">Adresse Site</label>
+                            <input type="text" name="addressSite" value="<%= plan.Adresse %>" class="form-control form-control-lg" placeholder="Enter Address Site"  />
+                        </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Select Image</label>
+                            <input type="file" name="image" class="form-control form-control-lg"  />
+                            <img src="/<%= plan.image %>" with="100" class="img-thmbnail mt-1"/>
+                        </div>
+                        <input type="hidden" name="old_image" value="<%= plan.image %>" />
+                        <div class="mb-3 d-grid">
+                            <input type="submit" name="submit" class="btn btn-success btn-lg" value="Update Plan" />
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <%- include('layout/footer')%>
